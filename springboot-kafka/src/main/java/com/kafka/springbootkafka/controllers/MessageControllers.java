@@ -23,7 +23,7 @@ public class MessageControllers {
 		this.kafkaProducer = kafkaProducer;
 	}
 	
-	//
+	//localhost:8081/api/v1/kafka/publish?message=customMessage
 	@GetMapping("/publish")
 	public ResponseEntity<String> publish(@RequestParam("message") String message) {
 		logger.info("publish start: message: "+message);
